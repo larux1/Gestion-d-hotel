@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="569.0" prefWidth="623.0" style="-fx-background-image: C:\Users\user\Documents\java\hotel1;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReservationController">
+   <children>
+      <Button fx:id="ajoutbtn" layoutX="8.0" layoutY="72.0" mnemonicParsing="false" onAction="#ajouterres" prefHeight="25.0" prefWidth="135.0" text="AJOUTER" />
+      <Button fx:id="modifbtn" layoutX="9.0" layoutY="127.0" mnemonicParsing="false" onAction="#modifier" prefHeight="29.0" prefWidth="132.0" text="MODIFIER">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Pane fx:id="ajclipane" layoutX="195.0" layoutY="5.0" prefHeight="558.0" prefWidth="420.0" style="-fx-background-color: PINK;">
+         <children>
+            <Button fx:id="annulerclibtn" layoutX="184.0" layoutY="381.0" mnemonicParsing="false" text="ANNULER" />
+            <Button fx:id="enreclibtn" layoutX="270.0" layoutY="378.0" mnemonicParsing="false" text="ENREGISTRER" />
+            <TextField fx:id="numcham" layoutX="76.0" layoutY="84.0" prefHeight="25.0" prefWidth="194.0" promptText="num_chambre" />
+            <TextField fx:id="numres" layoutX="76.0" layoutY="120.0" prefHeight="25.0" prefWidth="194.0" promptText="numero de resevation" />
+            <TextField fx:id="nomcli" layoutX="76.0" layoutY="162.0" prefHeight="25.0" prefWidth="194.0" promptText="nom client" />
+            <DatePicker fx:id="dateres" layoutX="76.0" layoutY="202.0" prefHeight="25.0" prefWidth="194.0" promptText="date resevation" />
+            <DatePicker fx:id="dated" layoutX="76.0" layoutY="291.0" prefHeight="25.0" prefWidth="194.0" promptText="date de depart" />
+            <DatePicker fx:id="datea" layoutX="76.0" layoutY="244.0" prefHeight="25.0" prefWidth="194.0" promptText="date d'arrivee" />
+         </children>
+      </Pane>
+      <Pane fx:id="modifresPane" layoutX="153.0" layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="558.0" prefWidth="465.0" style="-fx-background-color: pink;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="58.0" layoutY="14.0" prefHeight="31.0" prefWidth="330.0" text="Selectionnez la réservation à modifier" textAlignment="CENTER">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tabmodifres" layoutX="4.0" layoutY="48.0" prefHeight="489.0" prefWidth="456.0" style="-fx-background-image: &quot;hotel1&quot;;">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="C1" />
+                  <TableColumn prefWidth="75.0" text="C2" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Button fx:id="retour" layoutX="37.0" layoutY="513.0" mnemonicParsing="false" onAction="#retour" prefHeight="25.0" prefWidth="104.0" text="Retour" />
+   </children>
+</AnchorPane>
